@@ -1,13 +1,11 @@
 # **Netflix**
 <div align="center">
-<img alt="prints" width="80%" src="netflixMD.gif">
+<img alt="prints" width="30%" src="assets/img/netflixMD.gif">
 </div>
-
-##
 
 <p style="font-size: 1rem; color: #fff; font-weight: 700;">Recriação e reimaginação da página inicial do site da NETFLIX, utilizando HTML5, CSS3 e Javascript puro!</p>
 
-##
+###
 
 <p style="font-size: 1rem; color: #fff; font-weight: 700;">Re-creation and re-imagining of the NETFLIX website homepage, using HTML5, CSS3 and pure Javascript!</p>
 
