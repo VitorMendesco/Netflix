@@ -1,0 +1,31 @@
+@font-face {
+    font-family: NSBold;
+    src: url(../assets/font/NetflixSansBold.otf);
+}
+@font-face {
+    font-family: NSMedium;
+    src: url(../assets/font/NetflixSansMedium.otf);
+}
+@font-face {
+    font-family: NSLight;
+    src: url(../assets/font/NetflixSansLight.otf);
+}
+
+*, *::before, *::after {
+    /* spacing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: NSMedium;
+    /* color */
+    color: #fff;
+}
+
+body {
+    /* color */
+    background-color: #111111;
+}
