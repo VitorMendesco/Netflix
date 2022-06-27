@@ -1,3 +1,4 @@
+/*------FONT_IMPORT------*/
 @font-face {
   font-family: NSBold;
   src: url(../assets/font/NetflixSansBold.otf);
@@ -11,12 +12,14 @@
   src: url(../assets/font/NetflixSansLight.otf);
 }
 
+/*------VARS------*/
 :root {
   --NSred: #e50914;
   --NSblack: #141414;
   --NSgray: #bcbcbc;
 }
 
+/*------RESET------*/
 *,
 *::before,
 *::after {
@@ -27,6 +30,11 @@
   /* font */
   text-decoration: none;
   color: #fff;
+}
+
+.font-gray {
+  /* font */
+  color: var(--NSgray);
 }
 
 html {
@@ -41,17 +49,29 @@ body {
   background-color: var(--NSblack);
 }
 
-header .container {
-  /* position */
-  padding: 3em 6em;
+.container {
   /* flexbox */
   display: flex;
   align-items: center;
-  /* misc */
+  justify-content: center;
+}
+
+/*------HEADER------*/
+header {
+    /* size */
+    width: 100vw;
+    /* position */
+    /* position: absolute; */
+}
+
+header .container {
+  /* position */
+  padding: 3em 6em;
+  /* font */
   user-select: none;
 }
 
-header .container nav {
+header .container div {
   /* size */
   width: 100%;
   /* flexbox */
@@ -59,19 +79,19 @@ header .container nav {
   justify-content: space-between;
 }
 
-header .container nav nav {
+header .container div nav {
   /* flexbox */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-header .container nav nav:nth-child(1) {
+header .container div nav:nth-child(1) {
   /* size */
   width: 60em;
 }
 
-header .container nav nav:nth-last-child(1) {
+header .container div nav:nth-last-child(1) {
   /* size */
   width: 30em;
 }
@@ -127,4 +147,34 @@ header .logo {
   position: absolute;
   /* misc */
   cursor: pointer;
+}
+
+/*------MOVIE_BANNER------*/
+.main-movie {
+    background: no-repeat center/100% url(../assets/img/capa-house.jpg);
+}
+
+.main-movie .container {
+  /* position */
+  padding: 0 6em;
+  /* flexbox */
+  flex-direction: column;
+}
+
+.main-movie h1 {
+  /* font */
+  font-family: NSBold;
+  font-size: 8em;
+  user-select: none;
+}
+
+.main-movie .font-gray {
+  /* font */
+  font-weight: 100;
+  font-family: NSLight;
+}
+
+.main-movie p {
+  /* font */
+  font-size: 2em;
 }
