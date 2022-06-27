@@ -1,31 +1,130 @@
 @font-face {
-    font-family: NSBold;
-    src: url(../assets/font/NetflixSansBold.otf);
+  font-family: NSBold;
+  src: url(../assets/font/NetflixSansBold.otf);
 }
 @font-face {
-    font-family: NSMedium;
-    src: url(../assets/font/NetflixSansMedium.otf);
+  font-family: NSMedium;
+  src: url(../assets/font/NetflixSansMedium.otf);
 }
 @font-face {
-    font-family: NSLight;
-    src: url(../assets/font/NetflixSansLight.otf);
+  font-family: NSLight;
+  src: url(../assets/font/NetflixSansLight.otf);
 }
 
-*, *::before, *::after {
-    /* spacing */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font */
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: NSMedium;
-    /* color */
-    color: #fff;
+:root {
+  --NSred: #e50914;
+  --NSblack: #141414;
+  --NSgray: #bcbcbc;
+}
+
+*,
+*::before,
+*::after {
+  /* position */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font */
+  text-decoration: none;
+  color: #fff;
+}
+
+html {
+  /* font */
+  font-size: 62.5%;
+  font-weight: 500;
+  font-family: NSMedium, Times;
 }
 
 body {
-    /* color */
-    background-color: #111111;
+  /* color */
+  background-color: var(--NSblack);
+}
+
+header .container {
+  /* position */
+  padding: 3em 6em;
+  /* flexbox */
+  display: flex;
+  align-items: center;
+  /* misc */
+  user-select: none;
+}
+
+header .container nav {
+  /* size */
+  width: 100%;
+  /* flexbox */
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container nav nav {
+  /* flexbox */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header .container nav nav:nth-child(1) {
+  /* size */
+  width: 60em;
+}
+
+header .container nav nav:nth-last-child(1) {
+  /* size */
+  width: 30em;
+}
+
+header a {
+  /* font */
+  font-size: 2em;
+  font-family: NSLight;
+  color: var(--NSgray);
+}
+
+header a:hover {
+  color: #fff;
+}
+
+header .logo {
+  width: 20em;
+}
+
+.nav-icon {
+  /* size */
+  width: 3em;
+  height: 3em;
+  /* misc */
+  cursor: pointer;
+}
+.nav-icon:hover,
+.nav-icon:nth-last-child(1):hover::after {
+  /* misc */
+  filter: brightness(2);
+}
+
+.nav-icon:nth-last-child(1) {
+  /* back */
+  background: no-repeat left/100% url(../assets/img/user.jpg);
+  /* size */
+  width: 8em;
+  height: 8em;
+  /* border */
+  border-radius: 1em;
+  /* misc */
+  filter: brightness(1) !important;
+}
+
+.nav-icon:nth-last-child(1)::after {
+  content: "";
+  /* back */
+  background: no-repeat right/16% url(../assets/img/drop_arrow.png);
+  /* size */
+  width: 11em;
+  height: 8em;
+  /* position */
+  position: absolute;
+  /* misc */
+  cursor: pointer;
 }
