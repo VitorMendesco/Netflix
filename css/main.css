@@ -226,10 +226,10 @@ header .logo {
   background: linear-gradient(
       to bottom,
       var(--NSblack),
-      var(--trans),
+      #00000080,
       var(--NSblack) 90%
     ),
-    no-repeat center/100% url(../assets/img/banner/1.jpg);
+    no-repeat center/100% url(../assets/img/banner/0.jpg);
   /* size */
   height: 100vh;
   /* flexbox */

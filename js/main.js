@@ -36,7 +36,7 @@ const totalItems = 10;
 (function includeItems() {
   const carousel = document.querySelector(".owl-carousel");
   const carouselPath = "assets/img/carousel/";
-  for (let i = 1; i <= totalItems; i++) {
+  for (let i = 0; i < totalItems; i++) {
     let div = document.createElement("div");
     let img = document.createElement("img");
     div.classList.add("item");
@@ -49,9 +49,10 @@ const totalItems = 10;
   setupOwl();
 })();
 
-function setBanner(i) {
-  bannerIndex = i;
-  changeBanner(i);
+function setBanner(param) {
+  const banner = document.querySelector(".main-movie");
+  banner.style.background = `linear-gradient(to bottom, var(--NSblack), #00000080, var(--NSblack) 90%), no-repeat center/100% url(assets/img/banner/${param}.jpg)`;
+  banner.scrollIntoView({ behavior: "smooth" });
 }
 
 const body = document.querySelector("body");
@@ -75,8 +76,3 @@ document.addEventListener("scroll", () => {
     header.style.backdropFilter = "blur(0.1em)";
   }
 });
-
-const banner = document.querySelector(".main-movie");
-function changeBanner(param) {
-  banner.style.background = `linear-gradient(to bottom, var(--NSblack), var(--trans), var(--NSblack) 90%), no-repeat center/100% url(assets/img/carousel/${param}.jpg)`;
-}
