@@ -138,31 +138,35 @@ header .container {
   width: 100%;
   /* position */
   padding: 3em 6em;
+  /* flexbox */
+  justify-content: space-between;
   /* font */
   user-select: none;
 }
 
-header .container div {
+.div-navs {
   /* size */
   width: 100%;
   /* flexbox */
   display: flex;
   justify-content: space-between;
+  /* misc */
+  transition: all 0.6s ease;
 }
 
-header .container div nav {
+.div-navs nav {
   /* flexbox */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-header .container div nav:nth-child(1) {
+.div-navs nav:nth-child(1) {
   /* size */
   width: 60em;
 }
 
-header .container div nav:nth-last-child(1) {
+.div-navs nav:nth-last-child(1) {
   /* size */
   width: 30em;
 }
@@ -226,7 +230,7 @@ header .logo {
   background: linear-gradient(
       to bottom,
       var(--NSblack),
-      #00000080,
+      #00000080 50%,
       var(--NSblack) 90%
     ),
     no-repeat center/100% url(../assets/img/banner/0.jpg);
@@ -309,5 +313,13 @@ header .logo {
   height: 100%;
   display: block;
   /* misc */
+  transition: all 0.4s ease;
+  filter: brightness(0.8);
   cursor: pointer;
+}
+
+.item-carousel:hover {
+  /* misc */
+  transform: scale(1.01);
+  filter: brightness(1);
 }
