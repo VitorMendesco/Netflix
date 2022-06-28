@@ -122,10 +122,20 @@ header {
   /* size */
   width: 100%;
   /* position */
-  position: absolute;
+  position: fixed;
+  z-index: 1;
+  /* flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* misc */
+  transition: all 0.4s ease;
+  backdrop-filter: blur(0.1em);
 }
 
 header .container {
+  /* size */
+  width: 100%;
   /* position */
   padding: 3em 6em;
   /* font */
@@ -213,8 +223,13 @@ header .logo {
 /*------MOVIE_BANNER------*/
 .main-movie {
   /* back */
-  background: linear-gradient(to bottom, var(--NSblack), var(--trans)),
-    no-repeat center/100% url(../assets/img/banner/capa-house.jpg);
+  background: linear-gradient(
+      to bottom,
+      var(--NSblack),
+      var(--trans),
+      var(--NSblack) 90%
+    ),
+    no-repeat center/100% url(../assets/img/banner/1.jpg);
   /* size */
   height: 100vh;
   /* flexbox */
@@ -222,6 +237,8 @@ header .logo {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  /* misc */
+  transition: all 1s ease;
 }
 
 .main-movie .container {
@@ -274,9 +291,23 @@ header .logo {
 }
 
 /*------ITEMS_CAROUSEL------*/
+.catalogue {
+  padding: 0 6em;
+}
+
+.catalogue p {
+  /* position */
+  padding: 0.2em 0em;
+  /* font */
+  font-size: 5em;
+  font-family: NSBold;
+}
+
 .item-carousel {
   /* size */
   width: 100%;
   height: 100%;
   display: block;
+  /* misc */
+  cursor: pointer;
 }
