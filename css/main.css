@@ -17,6 +17,7 @@
   --NSred: #e50914;
   --NSblack: #141414;
   --NSgray: #bcbcbc;
+  --trans: #00000000;
 }
 
 /*------RESET------*/
@@ -49,6 +50,51 @@ body {
   background-color: var(--NSblack);
 }
 
+button {
+  /* back */
+  background-color: var(--NSblack);
+  /*size*/
+  width: 20rem;
+  height: 6rem;
+  /* position */
+  padding: 1rem 2rem;
+  /* flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border */
+  border: none;
+  border-radius: 0.6rem;
+  /* misc */
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+button img {
+  /* size */
+  height: 3rem;
+  /* position */
+  margin: 0 5%;
+  /* misc */
+  transition: all 0.4s ease;
+}
+
+button p {
+  /* position */
+  margin: 0 5%;
+  /* font */
+  font-family: NSMedium, Times;
+  color: #fff;
+  /* misc */
+  transition: all 0.4s ease;
+}
+
+button:hover p,
+button:hover img {
+  /* misc */
+  filter: invert();
+}
+
 .container {
   /* flexbox */
   display: flex;
@@ -58,10 +104,10 @@ body {
 
 /*------HEADER------*/
 header {
-    /* size */
-    width: 100vw;
-    /* position */
-    /* position: absolute; */
+  /* size */
+  width: 100vw;
+  /* position */
+  position: absolute;
 }
 
 header .container {
@@ -151,14 +197,26 @@ header .logo {
 
 /*------MOVIE_BANNER------*/
 .main-movie {
-    background: no-repeat center/100% url(../assets/img/capa-house.jpg);
+  /* back */
+  background: linear-gradient(to bottom, var(--NSblack), var(--trans)),
+    no-repeat center/100% url(../assets/img/banner/capa-house.jpg);
+  /* size */
+  height: 100vh;
+  /* flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .main-movie .container {
+  /* size */
+  width: 80%;
   /* position */
   padding: 0 6em;
   /* flexbox */
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .main-movie h1 {
@@ -169,12 +227,33 @@ header .logo {
 }
 
 .main-movie .font-gray {
+  /* position */
+  margin: 0 0.4em;
   /* font */
   font-weight: 100;
   font-family: NSLight;
 }
 
 .main-movie p {
+  /* position */
+  margin: 1% 0% 2% 2%;
   /* font */
   font-size: 2em;
+}
+
+.main-movie .buttons {
+  /* flexbox */
+  display: flex;
+}
+
+.main-movie button {
+  /* back */
+  background-color: #00000080;
+  /* position */
+  margin: 0 1em;
+}
+
+.main-movie button:hover {
+  /* back */
+  background-color: #ffffffe0;
 }
