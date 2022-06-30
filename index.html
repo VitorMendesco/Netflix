@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
     <title>Home | Netflix</title>
 </head>
-<body>
+<body onload="includeItems(), setBanner(0)">
     <header>
         <div class="container">
             <img class="logo" src="assets/img/logo.png" alt="Netflix" draggable="false">
@@ -33,22 +33,24 @@
     <main>
         <banner id="main" class="main-movie">
             <div class="container">
-                <h1>HOUSE OF CARDS <span class="font-gray">(2013)</span></h1>
-                <p>Set in present day Washington, D.C., House of Cards is the story of Frank Underwood, a ruthless and cunning politician, and his wife Claire who will stop at nothing to conquer everything. This wicked political drama penetrates the shadowy world of greed, sex and corruption in modern D.C.</p>
+                <h1 id="title"></h1>
+                <p id="desc"></p>
                 <div class="buttons">
                     <button role="button">
                         <img src="assets/img/play.png" alt="play icon" draggable="false"><p>Play</p>
                     </button>
-                    <button role="button">
+                    <button role="button" id="btnAddList">
                         <img src="assets/img/plus.png" alt="plus icon" draggable="false"><p>My List</p>
                     </button>
                 </div>
             </div>
         </banner>
         <section class="catalogue">
-            <p>Catalogue</p>
-            <div class="owl-carousel owl-theme">
-                <!-- INSERT HERE -->
+            <div class="carousel-line">
+                <p>Catalogue</p>
+                <div id="catalogue" class="owl-carousel owl-theme">
+                    <!-- INSERT HERE -->
+                </div>
             </div>
         </section>
     </main>

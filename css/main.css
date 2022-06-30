@@ -33,6 +33,11 @@
   color: #fff;
 }
 
+::selection {
+  color: #fff;
+  background-color: var(--NSred);
+}
+
 .font-gray {
   /* font */
   color: var(--NSgray);
@@ -59,7 +64,7 @@ banner {
   scroll-behavior: smooth;
 }
 
-section {
+section div {
   /* scroll */
   scroll-snap-align: end;
   scroll-behavior: smooth;
@@ -92,6 +97,7 @@ button img {
   margin: 0 5%;
   /* misc */
   transition: all 0.4s ease;
+  user-select: none;
 }
 
 button p {
@@ -102,6 +108,7 @@ button p {
   color: #fff;
   /* misc */
   transition: all 0.4s ease;
+  user-select: none;
 }
 
 button:hover p,
@@ -115,6 +122,28 @@ button:hover img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*------SCROLL------*/
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.3vw;
+  cursor: cell;
+  transition: 1s;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--NSblack);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--NSgray);
+  transition: 1s;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 
 /*------HEADER------*/
@@ -228,12 +257,11 @@ header .logo {
 .main-movie {
   /* back */
   background: linear-gradient(
-      to bottom,
-      var(--NSblack),
-      #00000080 50%,
-      var(--NSblack) 90%
-    ),
-    no-repeat center/100% url(../assets/img/banner/0.jpg);
+    to bottom,
+    var(--NSblack),
+    #00000080 50%,
+    var(--NSblack) 90%
+  );
   /* size */
   height: 100vh;
   /* flexbox */
