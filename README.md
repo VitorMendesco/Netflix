@@ -10,7 +10,6 @@
 <p style="font-size: 1rem; color: #fff; font-weight: 700;">Re-creation and re-imagining of the NETFLIX website homepage, using HTML5, CSS3 and pure Javascript!</p>
 
 #
-**<p align=center style="font-size: 1.5rem; color: #C41A29"><u>X horas de desenvolvimento</u></p>**
 
 <div align="center" style="display: inline_block;">
   <img align="center" alt="print1" width="90%" src="assets/img/print1.png">
