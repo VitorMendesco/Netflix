@@ -11,6 +11,15 @@
 
 #
 
+> 
+> 
+>To start, just open **index.html**
+>
+>
+
+
+#
+
 <div align="center" style="display: inline_block;">
   <img align="center" alt="print1" width="90%" src="assets/img/print1.png">
   
